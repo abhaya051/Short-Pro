@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .container {
+        height: 500px;
+        width: 80%;
+        border: 1px solid black;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      li {
+        list-style: none;
+      }
+    </style>
+    <div class="container">
+      <h1>Search Box</h1>
+      <input
+        type="text"
+        id="searchInput"
+        oninput="search()"
+        placeholder="Type Here To Check Something........."
+      />
+      <ul id="list">
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Pineapple</li>
+        <li>Banana</li>
+        <li>Litchi</li>
+        <li>Orange</li>
+        <li>Dragon Fruit</li>
+      </ul>
+    </div>
+    <script>
+      function search() {
+        let input = (let = document.getElementById("searchInput"));
+        let list = document.getElementById("list");
+        let items = document.getElementsByTagName("li");
+      }
+      for (let i = 0; i < items.length; i++) {
+        const items = items[i];
+        const text = li.textContent.toLowerCase();
+        if (text.include(input)) {
+          items.style.display = "none";
+        } else {
+          items.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
